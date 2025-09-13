@@ -1,0 +1,34 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+
+const { title, description, image } = Astro.props;
+const default_image = Astro.site + "default-image.png";
+---
+
+<script is:inline>
+  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+    const theme = localStorage.getItem("theme");
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+</script>
+
+<html lang="en" data-theme="night">
+  <head>
+    {
+      image ? (
+        <BaseHead title={title} description={description} image={image} />
+      ) : (
+        <BaseHead
+          title={title}
+          description={description}
+          image={default_image}
+        />
+      )
+    }
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

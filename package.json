@@ -1,0 +1,30 @@
+{
+  "name": "my-astro-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/preact": "^4.1.1",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.5.1",
+    "@tabler/icons-preact": "^3.34.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.7",
+    "lucide-preact": "^0.544.0",
+    "preact": "^10.27.1",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "daisyui": "^5.1.10",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "vite": "^7.1.5"
+  }
+}

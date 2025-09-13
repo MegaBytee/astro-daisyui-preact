@@ -1,0 +1,70 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+import MainLayout from "@/layouts/Main.astro";
+---
+
+<MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="flex flex-col gap-2 items-center justify-center">
+    <h1 style="margin-top:1.25rem; margin-bottom:.25rem; font-size:1.9rem;">
+      Hello, styled world!
+    </h1>
+    <p class="meta">
+      A tiny demo page using DaisyUI components and Tailwind-like utility look —
+      pure HTML.
+    </p>
+
+    <div
+      style="margin-top:1.25rem; display:flex; gap: .75rem; align-items:center;"
+    >
+      <div class="avatar">
+        <div
+          class="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+          style="width:48px;height:48px;background:linear-gradient(180deg,#60a5fa,#7dd3fc)"
+        >
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600">Starter template</div>
+        <div class="meta">
+          Includes Tailwind + DaisyUI config, Preact examples, and MDX support.
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 flex flex-wrap gap-3">
+      <button class="btn btn-primary" onclick="alert('Primary clicked')"
+        >Primary</button
+      >
+      <button class="btn btn-outline" onclick="alert('Outline clicked')"
+        >Outline</button
+      >
+      <button class="btn btn-ghost" onclick="alert('Ghost clicked')"
+        >Ghost</button
+      >
+    </div>
+
+    <div class="mt-4 flex gap-3 items-center">
+      <div class="badge badge-lg badge-secondary">Demo</div>
+      <div class="badge badge-outline">v1.0</div>
+    </div>
+
+    <div class="hero-right">
+      <div class="card w-full bg-base-100 shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title">Welcome</h2>
+          <p class="text-sm text-neutral-500">
+            This card is centered beside the hero content — small, clean, and
+            actionable.
+          </p>
+          <div class="card-actions mt-4 justify-end">
+            <button class="btn btn-sm btn-accent" onclick="notify('Explore')"
+              >Explore</button
+            >
+            <button class="btn btn-sm btn-ghost" onclick="notify('Dismiss')"
+              >Dismiss</button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
